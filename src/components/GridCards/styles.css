@@ -1,0 +1,9 @@
+.grid-teste {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  padding: 5px;
+}
+
+.item {
+  background-color: tomato;
+}
