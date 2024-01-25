@@ -6,20 +6,20 @@ export const CardStyles = styled.div`
   background-color: black;
 
   border: solid #0b60b0 4px;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 36px 10px 13px -11px rgba(0, 0, 0, 1);
 
-  padding: 30px;
+  padding: 40px 100px;
   gap: 15px;
 
   img {
-    border-radius: 8px;
+    border-radius: 12px;
   }
 
   span {
     background-color: #0b60b0;
     padding: 8px 6px;
-    border-radius: 8px;
+    border-radius: 16px;
   }
 
   .card-content {
@@ -47,7 +47,7 @@ export const CardStyles = styled.div`
       span {
         background-color: #0b60b0;
         padding: 8px 6px;
-        border-radius: 8px;
+        border-radius: 16px;
       }
     }
   }
