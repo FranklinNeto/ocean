@@ -139,7 +139,7 @@ body{
   display:flex;
 justify-content:center;
 
-  background-color:#4f3d6e;
+  background-color:whitesmoke;
   
 
 }

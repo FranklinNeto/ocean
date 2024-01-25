@@ -25,25 +25,35 @@ function Card() {
     }
   };
 
+  const resetCard = () => {
+    setTransformStyle("");
+    setIsHovered(false);
+  };
+
   return (
     <CardStyles
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onMouseMove={moveCard}
+      onMouseLeave={() => resetCard()}
+      onMouseMove={(e) => moveCard(e)}
       style={{ transform: transformStyle }}
     >
+      <div className="card-content">
+        <h2>Rick Sanchez</h2>
+        
+        <span>Scientist, inventor, and alcoholic</span>
+
+        <div className="div-spans">
+          <span>Status: Alive</span>
+          <span>Location: Earth (C-137)</span>
+        </div>
+      </div>
+
       <figure>
         <img
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="Rick Sanchez"
         />
       </figure>
-      <div className="card-content">
-        <h2>Rick Sanchez</h2>
-        <p>Scientist, inventor, and alcoholic.</p>
-        <p>Status: Alive</p>
-        <p>Location: Earth (C-137)</p>
-      </div>
     </CardStyles>
   );
 }
