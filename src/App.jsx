@@ -1,11 +1,14 @@
-import "./App.css";
+import Card from "./components/Card";
 import GridCards from "./components/GridCards";
+import Global from "./styles/global";
 
 function App() {
   return (
     <>
-      <h1>E ai, meus bacanas!</h1>
-      <GridCards/>
+      <Global />
+      <GridCards>
+        <Card />
+      </GridCards>
     </>
   );
 }
