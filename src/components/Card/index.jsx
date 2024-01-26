@@ -2,6 +2,8 @@ import { CardStyles } from "./styles";
 
 import { useState } from "react";
 
+import { TagStyled } from "../Tag/styles";
+
 function Card() {
   const [transformStyle, setTransformStyle] = useState("");
   const [isHovered, setIsHovered] = useState(false);
@@ -33,18 +35,21 @@ function Card() {
   return (
     <CardStyles
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => resetCard()}
-      onMouseMove={(e) => moveCard(e)}
+      onMouseLeave={resetCard}
+      onMouseMove={moveCard}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={resetCard}
+      onTouchMove={moveCard}
       style={{ transform: transformStyle }}
     >
       <div className="card-content">
         <h2>Rick Sanchez</h2>
-        
-        <span>Scientist, inventor, and alcoholic</span>
+
+        <TagStyled>Scientist, inventor, and alcoholic</TagStyled>
 
         <div className="div-spans">
-          <span>Status: Alive</span>
-          <span>Location: Earth (C-137)</span>
+          <TagStyled>Alive</TagStyled>
+          <TagStyled>Earth (C-137)</TagStyled>
         </div>
       </div>
 
