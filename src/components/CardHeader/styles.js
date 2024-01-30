@@ -11,10 +11,17 @@ export const CardHeaderStyles = styled.div`
   //background-color: purple;
 
   width: 100%;
-  height:15%;
+  height: 15%;
 
   h1 {
     font-size: 24px;
+
+    border-left: 6px solid #a9d3e9;
+    border-radius: 12px;
+
+    width: 70%;
+
+    text-align: center;
   }
 
   h3 {
