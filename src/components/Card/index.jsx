@@ -3,18 +3,20 @@ import { CardStyles } from "./styles";
 import { useState } from "react";
 
 import { TagStyled } from "../Tag/styles";
+import CardHeader from "../CardHeader";
 
 function Card() {
   const [transformStyle, setTransformStyle] = useState("");
   const [isHovered, setIsHovered] = useState(false);
 
   const moveCard = (event) => {
+    const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+    const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+
     if (isHovered) {
       const boundingRect = event.currentTarget.getBoundingClientRect();
-      const mouseX =
-        (event.clientX - boundingRect.left) / boundingRect.width - 0.5;
-      const mouseY =
-        0.5 - (event.clientY - boundingRect.top) / boundingRect.height;
+      const mouseX = (clientX - boundingRect.left) / boundingRect.width - 0.5;
+      const mouseY = 0.5 - (clientY - boundingRect.top) / boundingRect.height;
 
       setTransformStyle(`
         perspective(1000px)
@@ -41,15 +43,15 @@ function Card() {
       onTouchEnd={resetCard}
       onTouchMove={moveCard}
       style={{ transform: transformStyle }}
+      className="card"
     >
       <div className="card-content">
-        <h2>Rick Sanchez</h2>
+        <CardHeader />
 
-        <TagStyled>Scientist, inventor, and alcoholic</TagStyled>
-
-        <div className="div-spans">
-          <TagStyled>Alive</TagStyled>
-          <TagStyled>Earth (C-137)</TagStyled>
+        <div className="div-tags">
+          <TagStyled>Status: Alive</TagStyled>
+          <TagStyled>Espécie: Humana</TagStyled>
+          <TagStyled>Origem: Earth (C-137)</TagStyled>
         </div>
       </div>
 

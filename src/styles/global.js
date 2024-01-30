@@ -136,12 +136,19 @@ table {
 }
 
 body{
-  display:flex;
+display:flex;
 justify-content:center;
-
-  background-color:whitesmoke;
+background-color:whitesmoke;
   
 
+}
+
+#root{
+
+  width:100vw;
+  height:90vh;
+  display: flex;
+  justify-content:center;
 }
 
 `;

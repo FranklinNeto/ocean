@@ -12,11 +12,17 @@ export const CardStyles = styled.div`
   border-radius: 12px;
   box-shadow: 36px 10px 13px -11px rgba(0, 0, 0, 1);
 
-  padding: 40px 100px;
-  gap: 15px;
+  padding: 1.8rem 0.5rem;
+  gap: 4px;
+
+  height: 24rem;
+
+  cursor: pointer;
 
   img {
     border-radius: 12px;
+    width: 12rem;
+    margin-bottom: 8px;
   }
 
   .card-content {
@@ -24,27 +30,25 @@ export const CardStyles = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     color: #ffff;
 
-/*     background-color: red; //para teste
- */
-    max-width: 100%;
+    /* background-color: red; */ //para teste
 
-    h2 {
-      font-size: 32px;
+    width: 100%;
+    height: 40%;
+
+    margin-bottom: 8px;
+
+    .div-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin: 18px;
+      max-width: 300px;
+      //background-color: yellow; // teste
     }
-
-    p {
-      font-size: 16px;
-    }
-
-    .div-spans {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 2px;
-      width: 100%;
-     /*  background-color: yellow;*/ // teste
-    } 
   }
 `;
