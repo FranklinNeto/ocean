@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const CardHeaderStyles = styled.div`
   display: flex;
@@ -8,20 +8,45 @@ export const CardHeaderStyles = styled.div`
 
   margin-top: 24px;
   gap: 0.6rem;
-  //background-color: purple;
+  // background-color: orange;
 
-  width: 100%;
-  height: 15%;
+  width: 75%;
+  height: 20%;
 
-  h1 {
-    font-size: 24px;
+  div {
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    gap: 2.5rem;
 
-    border-left: 6px solid #a9d3e9;
-    border-radius: 12px;
+    // background-color: red;
 
-    width: 70%;
+    justify-content: flex-start;
+    align-items: center;
 
-    text-align: center;
+    .card-border {
+      background-color: var(--cor-terciaria);
+      width: 8px;
+      border-radius: 12px;
+      height: 2rem;
+
+      ${(props) =>
+        props.status === "Alive"
+          ? css`
+              background-color: var(--cor-vivo);
+            `
+          : css`
+              background-color: var(--cor-morto);
+            `};
+    }
+
+    h1 {
+      font-size: 24px;
+
+      width: 70%;
+
+      text-align: center;
+    }
   }
 
   h3 {

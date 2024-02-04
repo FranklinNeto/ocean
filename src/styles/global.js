@@ -5,6 +5,17 @@ export default createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
 */
+:root {
+  --cor-primaria: #242424;
+  --cor-secundaria: #FFFFFF;
+  --cor-terciaria: #12cdd4;
+  --cor-de-fundo : #272B33;
+  //--cor-hover: #272727;
+
+  --cor-vivo: #54B435;
+  --cor-morto: #B80000;
+}
+
 
 html,
 body,
@@ -135,18 +146,22 @@ table {
   box-sizing: border-box;
 }
 
-body{
+body, html{
 display:flex;
 justify-content:center;
-background-color:whitesmoke;
+background-color: var(--cor-de-fundo);
+
+min-height: 100vh;
+width: 100vw;
+
   
 
 }
 
 #root{
-
+  
   width:100vw;
-  height:90vh;
+  min-height:100vh;
   display: flex;
   justify-content:center;
 }

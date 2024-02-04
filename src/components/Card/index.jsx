@@ -5,7 +5,9 @@ import { useState } from "react";
 import { TagStyled } from "../Tag/styles";
 import CardHeader from "../CardHeader";
 
-function Card() {
+/* import PropTypes from "prop-types";
+ */
+function Card({ character }) {
   const [transformStyle, setTransformStyle] = useState("");
   const [isHovered, setIsHovered] = useState(false);
 
@@ -46,23 +48,28 @@ function Card() {
       className="card"
     >
       <div className="card-content">
-        <CardHeader />
+        <CardHeader character={character} />
 
         <div className="div-tags">
-          <TagStyled>Status: Alive</TagStyled>
-          <TagStyled>Espécie: Humana</TagStyled>
-          <TagStyled>Origem: Earth (C-137)</TagStyled>
+          <TagStyled>Status: {character.status}</TagStyled>
+          <TagStyled>Species: {character.species}</TagStyled>
+          <TagStyled>Origin: {character.origin.name}</TagStyled>
         </div>
       </div>
 
       <figure>
-        <img
-          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-          alt="Rick Sanchez"
-        />
+        <img src={character.image} alt={`Imagem de ${character.name}`} />
       </figure>
     </CardStyles>
   );
 }
+
+/* Card.propTypes = {
+  
+  character: PropTypes.
+  image: PropTypes.string.isRequired, // Certifique-se de ajustar o tipo conforme necessário
+  outrasProps: PropTypes.any,
+  // Adicione outras propriedades, se houver
+}; */
 
 export default Card;

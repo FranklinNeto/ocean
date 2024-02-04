@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
-export const CardStyles = styled.div`
+export const CardStyles = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background-color: black;
+  background-color: var(--cor-primaria);
 
-  border: solid #0b60b0 8px;
-  border-radius: 12px;
-  box-shadow: 36px 10px 13px -11px rgba(0, 0, 0, 1);
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 4px 4px white;
 
   padding: 1.8rem 0.5rem;
   gap: 4px;
 
   height: 24rem;
+  //width: 18.75rem;
 
   cursor: pointer;
 
