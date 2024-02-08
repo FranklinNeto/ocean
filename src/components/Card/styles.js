@@ -8,17 +8,20 @@ export const CardStyles = styled.li`
 
   background-color: var(--cor-primaria);
 
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 10px;
-  box-shadow: 4px 4px white;
+  //box-shadow: 4px 4px white;
 
   padding: 1.8rem 0.5rem;
   gap: 4px;
 
   height: 24rem;
-  //width: 18.75rem;
+
+  max-width: 19rem;
 
   cursor: pointer;
+
+  margin: 0.5rem;
 
   img {
     border-radius: 12px;
@@ -31,10 +34,10 @@ export const CardStyles = styled.li`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
     color: #ffff;
 
-    /* background-color: red; */ //para teste
+    //background-color: red; //para teste
 
     width: 100%;
     height: 40%;
@@ -48,7 +51,7 @@ export const CardStyles = styled.li`
       align-items: center;
       gap: 8px;
       margin: 18px;
-      max-width: 300px;
+      width: 100%;
       //background-color: yellow; // teste
     }
   }

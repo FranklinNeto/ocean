@@ -15,9 +15,9 @@ function App() {
   useEffect(() => {
     const intersectionObserver = new IntersectionObserver((entries) => {
       if (entries.some((entry) => entry.isIntersecting)) {
-        console.log("Está visível");
+        //console.log("Está visível");
         setCurrentPage((prev) => prev + 1);
-        console.log(currentPage);
+        //console.log(currentPage);
       }
 
       //console.log("Estamos obsevando", entries);

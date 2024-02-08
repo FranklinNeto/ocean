@@ -8,9 +8,9 @@ export const CardHeaderStyles = styled.div`
 
   margin-top: 24px;
   gap: 0.6rem;
-  // background-color: orange;
+   //background-color: orange;
 
-  width: 75%;
+  width: 80%;
   height: 20%;
 
   div {

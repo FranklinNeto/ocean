@@ -7,7 +7,7 @@ function CardHeader({character}) {
         <div className="card-border"></div>
         <h1 className="card-name">{character.name}</h1>
       </div>
-      <h3 className="card-description">Scientist, inventor, and alcoholic</h3>
+      {/* <h3 className="card-description">Scientist, inventor, and alcoholic</h3> */}
     </CardHeaderStyles>
   );
 }

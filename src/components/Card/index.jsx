@@ -8,7 +8,7 @@ import CardHeader from "../CardHeader";
 /* import PropTypes from "prop-types";
  */
 function Card({ character }) {
-  const [transformStyle, setTransformStyle] = useState("");
+  // const [transformStyle, setTransformStyle] = useState("");
   const [isHovered, setIsHovered] = useState(false);
 
   const moveCard = (event) => {
@@ -20,19 +20,18 @@ function Card({ character }) {
       const mouseX = (clientX - boundingRect.left) / boundingRect.width - 0.5;
       const mouseY = 0.5 - (clientY - boundingRect.top) / boundingRect.height;
 
-      setTransformStyle(`
+      event.currentTarget.style.transform = `
         perspective(1000px)
-        rotateX(${mouseY * 25}deg)
-        rotateY(${mouseX * 25}deg)
+        rotateX(${mouseY * 30}deg)
+        rotateY(${mouseX * 30}deg)
         translateZ(20px)
-      `);
-    } else {
-      setTransformStyle("");
+        scale(1.2)
+      `;
     }
   };
 
-  const resetCard = () => {
-    setTransformStyle("");
+  const resetCard = (event) => {
+    event.currentTarget.style.transform = "";
     setIsHovered(false);
   };
 
@@ -44,7 +43,7 @@ function Card({ character }) {
       onTouchStart={() => setIsHovered(true)}
       onTouchEnd={resetCard}
       onTouchMove={moveCard}
-      style={{ transform: transformStyle }}
+      style={{ transform: "transform 0.3s cubic-bezier(.17,.67,.83,.67)" }}
       className="card"
     >
       <div className="card-content">

@@ -1,15 +1,7 @@
-import { useEffect, useState } from "react";
 import Card from "../Card";
 import { GridCardsStyle } from "./styles";
 
-//import api from "../../services/api";
-
-// eslint-disable-next-line react/prop-types
 function GridCards({ characters }) {
-  
-
- 
-
   return (
     <GridCardsStyle>
       <ul>
